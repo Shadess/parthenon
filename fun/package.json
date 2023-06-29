@@ -1,0 +1,9 @@
+{
+  "name": "fun",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "private": true,
+  "dependencies": {
+    "currency.js": "^2.0.4"
+  }
+}

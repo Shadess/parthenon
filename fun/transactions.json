@@ -1,0 +1,136 @@
+{
+  "transactions": [
+    {
+      "ammount": 7836,
+      "category": "Shopping",
+      "company": "Lululemon",
+      "dateTime": "2023-06-09T11:13:19.299Z"
+    },
+    {
+      "ammount": 10976,
+      "category": "Shopping",
+      "company": "Nordstroms",
+      "dateTime": "2023-06-08T11:13:19.299Z"
+    },
+    {
+      "ammount": 5432,
+      "category": "Shopping",
+      "company": "Le Labo",
+      "dateTime": "2023-06-10T11:43:19.299Z"
+    },
+    {
+      "ammount": 1234,
+      "category": "Food",
+      "company": "Chipotle",
+      "dateTime": "2023-06-09T10:22:19.299Z"
+    },
+    {
+      "ammount": 1534,
+      "category": "Food",
+      "company": "Chipotle",
+      "dateTime": "2023-06-09T15:45:19.299Z"
+    },
+    {
+      "ammount": 1176,
+      "category": "Food",
+      "company": "Chipotle",
+      "dateTime": "2023-06-08T11:13:19.299Z"
+    },
+    {
+      "ammount": 1256,
+      "category": "Food",
+      "company": "Chipotle",
+      "dateTime": "2023-06-08T14:13:19.299Z"
+    },
+    {
+      "ammount": 1576,
+      "category": "Food",
+      "company": "Chipotle",
+      "dateTime": "2023-06-08T20:13:19.299Z"
+    },
+    {
+      "ammount": 1245,
+      "category": "Food",
+      "company": "Chipotle",
+      "dateTime": "2023-06-10T11:13:19.299Z"
+    },
+    {
+      "ammount": 867,
+      "category": "Food",
+      "company": "Taco Bell",
+      "dateTime": "2023-06-10T16:13:19.299Z"
+    },
+    {
+      "ammount": 987,
+      "category": "Food",
+      "company": "Taco Bell",
+      "dateTime": "2023-06-11T11:13:19.299Z"
+    },
+    {
+      "ammount": 1276,
+      "category": "Food",
+      "company": "Taco Bell",
+      "dateTime": "2023-06-11T17:13:19.299Z"
+    },
+    {
+      "ammount": 1098,
+      "category": "Food",
+      "company": "Taco Bell",
+      "dateTime": "2023-06-12T11:13:19.299Z"
+    },
+    {
+      "ammount": 987,
+      "category": "Food",
+      "company": "Taco Bell",
+      "dateTime": "2023-06-12T18:13:19.299Z"
+    },
+    {
+      "ammount": 1987,
+      "category": "Food",
+      "company": "Thai Villa",
+      "dateTime": "2023-06-13T11:13:19.299Z"
+    },
+    {
+      "ammount": 2287,
+      "category": "Food",
+      "company": "Thai Villa",
+      "dateTime": "2023-06-13T11:13:19.299Z"
+    },
+    {
+      "ammount": 2165,
+      "category": "Food",
+      "company": "Thai Villa",
+      "dateTime": "2023-06-14T16:13:19.299Z"
+    },
+    {
+      "ammount": 2245,
+      "category": "Food",
+      "company": "Thai Villa",
+      "dateTime": "2023-06-14T15:13:19.299Z"
+    },
+    {
+      "ammount": 20245,
+      "category": "Food",
+      "company": "Balthazar",
+      "dateTime": "2023-06-14T20:13:19.299Z"
+    },
+    {
+      "ammount": 14235,
+      "category": "Food",
+      "company": "Balthazar",
+      "dateTime": "2023-06-15T15:13:19.299Z"
+    },
+    {
+      "ammount": 32198,
+      "category": "Food",
+      "company": "Balthazar",
+      "dateTime": "2023-06-16T15:13:19.299Z"
+    },
+    {
+      "ammount": 14567,
+      "category": "Food",
+      "company": "Balthazar",
+      "dateTime": "2023-06-17T15:13:19.299Z"
+    }
+  ]
+}
