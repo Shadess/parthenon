@@ -1,30 +1,31 @@
 import { useCallback, useRef, useState } from 'react';
 import { FlatList, Pressable, Text, View } from 'react-native';
-import { Header2Text, SmallText } from '../styled/text';
+import { SmallText } from '../styled/text';
 import BreadcrumbBubble from '../bread-crumb-bubble/BreadCrumbBubble';
-import ProPlan from './ProPlan';
-import ProCoachingPlan from './ProCoachingPlan';
-
-export interface IPlanInfo {
-  priceAnnuallyTotal: string;
-  priceMonthlyAnnually: string;
-  priceMonthlyBase: string;
-  title: string;
-  type: PaidPlansType;
-}
-
-export enum PriceChoice {
-  annually = 'ANNUALLY',
-  monthly = 'MONTHLY',
-}
-
-enum PaidPlansType {
-  pro = 'PRO',
-  proCoaching = 'PRO_COACHING',
-}
+import { IPlanInfo } from '../../interfaces';
+import { PaidPlansType, PriceChoice } from '../../enums';
+import { IMAGES } from '../../constants';
+import PlanDetails from './PlanDetails';
 
 const PaidPlans: IPlanInfo[] = [
   {
+    benefits: [
+      {
+        blurb: 'Connect all of your accounts (limit on free tier is 3)',
+        icon: IMAGES.Cash,
+        title: 'Unlimited Accounts',
+      },
+      {
+        blurb: 'Get proactive financial insights from Parthean AI',
+        icon: IMAGES.Bulb,
+        title: 'Proactive tips',
+      },
+      {
+        blurb: "You'll get early access to our most powerful AI tools",
+        icon: IMAGES.Rocket,
+        title: 'New AI Tools',
+      },
+    ],
     priceAnnuallyTotal: '69.99',
     priceMonthlyAnnually: '$5.83',
     priceMonthlyBase: '$9.99',
@@ -32,6 +33,20 @@ const PaidPlans: IPlanInfo[] = [
     type: PaidPlansType.pro,
   },
   {
+    benefits: [
+      {
+        blurb:
+          'Unlimited calls and chats with your very personal finance coach',
+        icon: IMAGES.CatieCoach,
+        title: 'Human Coaching',
+      },
+      {
+        blurb:
+          'Unlimited accounts, proactive financial tips from Parthean AI, and our new, most powerful AI tools',
+        icon: IMAGES.Rocket,
+        title: 'All Pro Features',
+      },
+    ],
     priceAnnuallyTotal: '879.99',
     priceMonthlyAnnually: '$66.67',
     priceMonthlyBase: '$79.99',
@@ -99,11 +114,7 @@ export default function PricePicker() {
         viewabilityConfig={viewConfigRef.current}
         renderItem={({ item, index }) => (
           <View className="bg-pgrey mx-3 p-8 rounded-lg w-329px" key={index}>
-            {item.type === PaidPlansType.pro ? (
-              <ProPlan item={item} paymentChoice={paymentChoice} />
-            ) : (
-              <ProCoachingPlan item={item} paymentChoice={paymentChoice} />
-            )}
+            <PlanDetails item={item} paymentChoice={paymentChoice} />
           </View>
         )}
       />

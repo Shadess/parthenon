@@ -1,6 +1,7 @@
-import { Pressable, SafeAreaView, Text, View } from 'react-native';
+import { Image, Pressable, SafeAreaView, Text, View } from 'react-native';
 import { HeaderText, SubHeaderText } from '../components/styled/text';
 import PricePicker from '../components/price-picker/PricePicker';
+import { IMAGES } from '../constants';
 
 export default function Main() {
   return (
@@ -11,11 +12,7 @@ export default function Main() {
             console.log('close');
           }}
         >
-          <View className="bg bg-pgrey h-8 relative rounded-full w-8 self-end">
-            <Text className="left-7px rotate-45 text-3xl text-white top-0.5">
-              +
-            </Text>
-          </View>
+          <Image className="self-end" source={IMAGES.Exit} />
         </Pressable>
 
         <HeaderText className="mt-2 text-center text-white">
@@ -28,6 +25,12 @@ export default function Main() {
       </View>
 
       <PricePicker />
+
+      <View className="px-4 w-full">
+        <Pressable className="bg bg-pgreen items-center justify-center mt-8 p-3 rounded-lg w-full">
+          <SubHeaderText className="font-bold">Continue</SubHeaderText>
+        </Pressable>
+      </View>
     </SafeAreaView>
   );
 }
