@@ -18,11 +18,11 @@ export default function Main() {
           </View>
         </Pressable>
 
-        <HeaderText className="mt-2 text-center">
+        <HeaderText className="mt-2 text-center text-white">
           Financial coaching and education in your pocket
         </HeaderText>
 
-        <SubHeaderText className="my-2 text-center">
+        <SubHeaderText className="my-2 text-center text-white">
           Upgrade to get the most out of Parthean
         </SubHeaderText>
       </View>

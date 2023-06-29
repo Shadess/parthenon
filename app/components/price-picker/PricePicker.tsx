@@ -1,7 +1,17 @@
 import { useCallback, useRef, useState } from 'react';
 import { FlatList, Pressable, Text, View } from 'react-native';
-import { SmallText } from '../styled/text';
+import { Header2Text, SmallText } from '../styled/text';
 import BreadcrumbBubble from '../bread-crumb-bubble/BreadCrumbBubble';
+import ProPlan from './ProPlan';
+import ProCoachingPlan from './ProCoachingPlan';
+
+export interface IPlanInfo {
+  priceAnnuallyTotal: string;
+  priceMonthlyAnnually: string;
+  priceMonthlyBase: string;
+  title: string;
+  type: PaidPlansType;
+}
 
 export enum PriceChoice {
   annually = 'ANNUALLY',
@@ -13,7 +23,7 @@ enum PaidPlansType {
   proCoaching = 'PRO_COACHING',
 }
 
-const PaidPlans = [
+const PaidPlans: IPlanInfo[] = [
   {
     priceAnnuallyTotal: '69.99',
     priceMonthlyAnnually: '$5.83',
@@ -57,7 +67,9 @@ export default function PricePicker() {
     },
     [setFlatlistIndex],
   );
-  const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 });
+  const viewConfigRef = useRef({
+    viewAreaCoveragePercentThreshold: 50,
+  });
 
   return (
     <View className="items-center mt-6">
@@ -82,11 +94,16 @@ export default function PricePicker() {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={PaidPlans}
+        onViewableItemsChanged={onViewCallback}
         pagingEnabled
         viewabilityConfig={viewConfigRef.current}
         renderItem={({ item, index }) => (
           <View className="bg-pgrey mx-3 p-8 rounded-lg w-329px" key={index}>
-            <Text>hey diddle2</Text>
+            {item.type === PaidPlansType.pro ? (
+              <ProPlan item={item} paymentChoice={paymentChoice} />
+            ) : (
+              <ProCoachingPlan item={item} paymentChoice={paymentChoice} />
+            )}
           </View>
         )}
       />
